@@ -1,9 +1,7 @@
 clear;
 clc;
-
-for k=1:5
-  clearvars -except k;  % Clears all variables except k
-    n = 25;   % Population size
+ 
+n = 25;   % Population size
 t_max = 50;
 A = 100;   
 r0 = 100;   
@@ -79,7 +77,7 @@ ylabel('Values');
 title(['Convergence Plot ', num2str(k)]);
 grid on;
 saveas(gcf, ['convergence_plot_' num2str(k) '.svg']);
-end
+
 
 
 
