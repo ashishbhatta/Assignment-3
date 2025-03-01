@@ -1,6 +1,6 @@
 clear;
 clc;
-
+tic;
 %minimum and maximum size of PV1 and PV2
 bounds = ([[0, 22710]; [0, 22710]]);
 
@@ -8,7 +8,7 @@ bounds = ([[0, 22710]; [0, 22710]]);
 t_init = 0.1;
 
 %Final Temperature
-t_final = 0.01;
+t_final = 0.061112; %for 50 iteration t_final is caluated using geometic seires
 
 %Cooling rates
 cooling_rates = [0.99];
@@ -37,7 +37,7 @@ for i = 1:length(cooling_rates)
     % Display the result
     disp(['Result for cooling rate ', num2str(cooling_rate), ' is:']);
     disp(final_solution);
-    
+    toc
     % Store the results in the structure
     % field_name = sprintf('cooling_rate_%.2f', cooling_rate);
     % field_name = strrep(field_name, '.', '_');  % Replace '.' with '_'
